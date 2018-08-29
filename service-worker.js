@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "261be9256f447656abba199689264363"
+    "revision": "1e759caa98c3ba53ad415887855bd572"
   },
   {
     "url": "assets/css/0.styles.e67848d1.css",
@@ -168,12 +168,12 @@ self.__precacheManifest = [
     "revision": "775e7df0bebd5a1d875c999c63311a06"
   },
   {
-    "url": "assets/js/app.fe808553.js",
-    "revision": "d5d9e383c6821772341b46d17c0f7381"
+    "url": "assets/js/app.bbaa4d16.js",
+    "revision": "fe47bd026b3798eb44f30d64e8cb139f"
   },
   {
     "url": "blog/entry.html",
-    "revision": "b9270260efec1e2ecee909666d97bfd2"
+    "revision": "7d18cc377ed86491919fe716880479ff"
   },
   {
     "url": "css/bulma.css",
@@ -181,95 +181,99 @@ self.__precacheManifest = [
   },
   {
     "url": "css/custom.css",
-    "revision": "ac383ece35ad30fca30bc750f7288259"
+    "revision": "3ed21af0c0908438c75692b8037282a8"
   },
   {
     "url": "documents/TFG.html",
-    "revision": "abdbf666d6e62f856722d96db040c2c1"
+    "revision": "ba05df51871867d47d6d2d1fb9a125c7"
   },
   {
     "url": "documents/TFM.html",
-    "revision": "f48bdec541bb77ea0aad596da927bf41"
+    "revision": "351d0c14be3cc3ccf244ff55efdb0e88"
   },
   {
     "url": "en/guide/assets.html",
-    "revision": "56de68dce3f8c012a11a9877966be2ac"
+    "revision": "c754b03a5a90ad8aacd3bec53e98ce4b"
   },
   {
     "url": "en/guide/basic-config.html",
-    "revision": "b0b5dd303253764ff37d4db931d50fb1"
+    "revision": "31b7401e81ea8a18b68677baf57ae07f"
   },
   {
     "url": "en/guide/custom-themes.html",
-    "revision": "504d081a645e6e720cdcbecd14a16851"
+    "revision": "e3aaab85750dcc3413ff1234b9075ca5"
   },
   {
     "url": "en/guide/deploy.html",
-    "revision": "7fb77dc591990658115afae6d051db56"
+    "revision": "0e715ff41f2ca41e37899b0dba37f0d6"
   },
   {
     "url": "en/guide/getting-started.html",
-    "revision": "b9e030a5e6effbdf9f03225bc28bf318"
+    "revision": "6e79c4f3d81a8584ebdbbe82721f55c9"
   },
   {
     "url": "en/guide/i18n.html",
-    "revision": "7982cede34472d471ad1fa734b14dcfa"
+    "revision": "bb42d71c7b4f0028da943f4cddb1401f"
   },
   {
     "url": "en/guide/index.html",
-    "revision": "f6e2f0b01ec7b91a76a5a4935cfcfdd2"
+    "revision": "a3236c9a3edd66e10317451c1bfbc351"
   },
   {
     "url": "en/guide/markdown.html",
-    "revision": "b3d3f67a9776992c87b0805ada1a0949"
+    "revision": "b04445408657cdaa3385176a5ddbea8b"
   },
   {
     "url": "en/guide/using-vue.html",
-    "revision": "ff639c43dec82cddd9b3259a839eb6d5"
+    "revision": "11884aa8deeaaf665c8bc60385cb98a1"
   },
   {
     "url": "en/index.html",
-    "revision": "656d70b8fdcd0854329b1b915bb22f75"
+    "revision": "1315e839301be1cbf50b63dd0160379d"
   },
   {
     "url": "guide/assets.html",
-    "revision": "d383a162d6215e91e8905ed5d0c8a0e4"
+    "revision": "748d9c7fa54dbb8aeb3e4708455c6b78"
   },
   {
     "url": "guide/basic-config.html",
-    "revision": "4535632ecda0b88881494952bf91b025"
+    "revision": "f064d632fae5adce1e56a98f39395be0"
   },
   {
     "url": "guide/custom-themes.html",
-    "revision": "02187bddfbdbdc25426820bb313263fa"
+    "revision": "df7586b3d6d4536d909d2338a5bde9a7"
   },
   {
     "url": "guide/deploy.html",
-    "revision": "b0ec56f871eacbb966807a4628553aae"
+    "revision": "3f272c2641994b71f57e4256a94c1779"
   },
   {
     "url": "guide/getting-started.html",
-    "revision": "0ae8a2207e0606aec9076a0b62971f2a"
+    "revision": "22906c28cb75fb0346f971af1d6e0cea"
   },
   {
     "url": "guide/i18n.html",
-    "revision": "a64f7148c5555ed9be54fc3a7bf1d089"
+    "revision": "f001619a724c765b5d03e4e5c3273b8d"
   },
   {
     "url": "guide/index.html",
-    "revision": "9b8e7cf8b5941850488af3d506df19ec"
+    "revision": "600c48d14f91c6d17724b7d12a9ccddf"
   },
   {
     "url": "guide/markdown.html",
-    "revision": "61988f0d4ee179540ac841ed7e5c7d5f"
+    "revision": "1d883af874b0e94d3c14b839e8a54563"
   },
   {
     "url": "guide/using-vue.html",
-    "revision": "08e59015780eb938ba162515cd459c37"
+    "revision": "1fbbaf6835db45c5cab38921e9082a55"
   },
   {
     "url": "hero.png",
     "revision": "d1fed5cb9d0a4c4269c3bcc4d74d9e64"
+  },
+  {
+    "url": "heroback.jpg",
+    "revision": "214a85d872acfc789bee191789c15332"
   },
   {
     "url": "icons/android-chrome-192x192.png",
@@ -325,7 +329,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "f12625edf156cecf4de460f01ca48d45"
+    "revision": "46a0cd7cb1a5621215a3eae2a09e45d0"
   },
   {
     "url": "line-numbers-desktop.png",
@@ -341,19 +345,19 @@ self.__precacheManifest = [
   },
   {
     "url": "poc/phantomjs.html",
-    "revision": "458e04b8407f62cafa42998b4e81d6df"
+    "revision": "6c0e7153cfe442e58846988279515921"
   },
   {
     "url": "resources/usability.html",
-    "revision": "f088f0e9c3ed02d6e41cec80347e8b1d"
+    "revision": "78d0a617bd3c2757caccd379c0ef7755"
   },
   {
     "url": "whoami/index.html",
-    "revision": "ce6ebdf02d25af34d32755239f8df9b8"
+    "revision": "e4f2a9e07efa4d9e59ad3441c57a76e3"
   },
   {
     "url": "whoami/tech.html",
-    "revision": "cdc9570b89b0123db39fd1d0442a1cfb"
+    "revision": "46d7d97f491f9ac61812f7d48821356d"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
