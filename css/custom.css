@@ -207,3 +207,7 @@ a.sidebar-link:hover {
   background-color: aliceblue !important;
   border-left-color: #3eaf7c !important;
 }
+
+.theme-container.no-sidebar{
+  background-image: url(https://images.pexels.com/photos/1362309/pexels-photo-1362309.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+}
