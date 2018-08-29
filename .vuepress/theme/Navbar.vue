@@ -1,49 +1,49 @@
 <template>
-  <header class="navbar">
-    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+  <nav class="navbar is-link">
+    <div class="navbar-brand">
 
-    <router-link
-      :to="$localePath"
-      class="home-link"
-    >
-      <img
-        class="logo"
-        v-if="$site.themeConfig.logo"
-        :src="$withBase($site.themeConfig.logo)"
-        :alt="$siteTitle"
-      >
-      <span
-        ref="siteName"
-        class="site-name"
-        v-if="$siteTitle"
-        :class="{ 'can-hide': $site.themeConfig.logo }"
-      >{{ $siteTitle }}</span>
-    </router-link>
+      <router-link :to="$localePath" class="navbar-item">
+        <span class="text-logo" v-if="$siteTitle">{{ $siteTitle }}</span>
+      </router-link>
 
-    <div
-      class="links"
-      :style="{
-        'max-width': linksWrapMaxWidth + 'px'
-      }"
-    >
-      <AlgoliaSearchBox
-        v-if="isAlgoliaSearch"
-        :options="algolia"
-      />
-      <SearchBox v-else-if="$site.themeConfig.search !== false"/>
-      <NavLinks class="can-hide"/>
+      <div class="navbar-burger burger" data-target="navMenuColorprimary-example">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
-  </header>
+
+    <div id="navMenuColorprimary-example" class="navbar-menu">
+      <div class="navbar-start">
+        <!-- LINKS IZQ -->
+      </div>
+
+      <div class="navbar-end" style="align-items: center">
+        <SearchBox v-if="$site.themeConfig.search !== false"/>
+
+        <template v-for="item in userLinks" >
+          <DropdownLink v-if="item.type === 'links'" :item="item" />
+          <NavLink v-else :item="item" />
+        </template>
+
+      </div>
+
+    </div>
+  </nav>
+
+
 </template>
 
 <script>
 import SidebarButton from './SidebarButton.vue'
-import AlgoliaSearchBox from '@AlgoliaSearchBox'
+import NavLink from './NavLink.vue';
 import SearchBox from './SearchBox.vue'
-import NavLinks from './NavLinks.vue'
+import DropdownLink from './DropdownLink.vue'
+import { resolveNavLinkItem } from './util'
 
 export default {
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
+  components: { SidebarButton, SearchBox , DropdownLink, NavLink},
 
   data () {
     return {
@@ -67,12 +67,74 @@ export default {
   },
 
   computed: {
-    algolia () {
-      return this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
+    userNav () {
+      return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || []
     },
 
-    isAlgoliaSearch () {
-      return this.algolia && this.algolia.apiKey && this.algolia.indexName
+    nav () {
+      const { locales } = this.$site
+      if (locales && Object.keys(locales).length > 1) {
+        const currentLink = this.$page.path
+        const routes = this.$router.options.routes
+        const themeLocales = this.$site.themeConfig.locales || {}
+        const languageDropdown = {
+          text: this.$themeLocaleConfig.selectText || 'Languages',
+          items: Object.keys(locales).map(path => {
+            const locale = locales[path]
+            const text = themeLocales[path] && themeLocales[path].label || locale.lang
+            let link
+            // Stay on the current page
+            if (locale.lang === this.$lang) {
+              link = currentLink
+            } else {
+              // Try to stay on the same page
+              link = currentLink.replace(this.$localeConfig.path, path)
+              // fallback to homepage
+              if (!routes.some(route => route.path === link)) {
+                link = path
+              }
+            }
+            return { text, link }
+          })
+        }
+        return [...this.userNav, languageDropdown]
+      }
+      return this.userNav
+    },
+
+    userLinks () {
+      return (this.nav || []).map(link => {
+        return Object.assign(resolveNavLinkItem(link), {
+          items: (link.items || []).map(resolveNavLinkItem)
+        })
+      })
+    },
+
+    repoLink () {
+      const { repo } = this.$site.themeConfig
+      if (repo) {
+        return /^https?:/.test(repo)
+          ? repo
+          : `https://github.com/${repo}`
+      }
+    },
+
+    repoLabel () {
+      if (!this.repoLink) return
+      if (this.$site.themeConfig.repoLabel) {
+        return this.$site.themeConfig.repoLabel
+      }
+
+      const repoHost = this.repoLink.match(/^https?:\/\/[^/]+/)[0]
+      const platforms = ['GitHub', 'GitLab', 'Bitbucket']
+      for (let i = 0; i < platforms.length; i++) {
+        const platform = platforms[i]
+        if (new RegExp(platform, 'i').test(repoHost)) {
+          return platform
+        }
+      }
+
+      return 'Source'
     }
   }
 }
@@ -84,50 +146,3 @@ function css (el, property) {
   return win.getComputedStyle(el, null)[property]
 }
 </script>
-
-<style lang="stylus">
-@import './styles/config.styl'
-
-$navbar-vertical-padding = 0.7rem
-$navbar-horizontal-padding = 1.5rem
-
-.navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
-  line-height $navbarHeight - 1.4rem
-  position relative
-  a, span, img
-    display inline-block
-  .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
-    vertical-align top
-  .site-name
-    font-size 1.3rem
-    font-weight 600
-    color $textColor
-    position relative
-  .links
-    padding-left 1.5rem
-    box-sizing border-box
-    background-color white
-    white-space nowrap
-    font-size 0.9rem
-    position absolute
-    right $navbar-horizontal-padding
-    top $navbar-vertical-padding
-    display flex
-    .search-box
-      flex: 0 0 auto
-      vertical-align top
-    .nav-links
-      flex 1
-
-@media (max-width: $MQMobile)
-  .navbar
-    padding-left 4rem
-    .can-hide
-      display none
-    .links
-      padding-left 1.5rem
-</style>

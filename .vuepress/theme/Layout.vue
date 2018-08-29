@@ -1,14 +1,11 @@
 <template>
-  <div
-    class="theme-container"
-    :class="pageClasses"
-    @touchstart="onTouchStart"
-    @touchend="onTouchEnd"
-  >
-    <Navbar
-      v-if="shouldShowNavbar"
-      @toggle-sidebar="toggleSidebar"
-    />
+  <div class="theme-container" :class="pageClasses" @touchstart="onTouchStart" @touchend="onTouchEnd">
+
+  <!-- POR AHORA AQUI EL CSS -->
+  <link rel="stylesheet" href="/css/bulma.css">
+  <link rel="stylesheet" href="/css/custom.css">
+
+    <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar" />
 
     <div
       class="sidebar-mask"
@@ -51,6 +48,12 @@
         slot="bottom"
       />
     </Page>
+
+    <section class="columns has-background-infox is-vcentered has-background-link" id="footer">
+      <section class="column">
+        <?php require '/template/footer.php'; ?>
+      </section>
+    </section>
 
     <SWUpdatePopup :updateEvent="swUpdateEvent"/>
   </div>

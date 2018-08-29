@@ -1,6 +1,9 @@
 <template>
-  <div class="search-box">
+  <div class="control search-box">
+
+
     <input
+      class="input is-primary"
       @input="query = $event.target.value"
       aria-label="Search"
       :value="query"
