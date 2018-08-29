@@ -1,6 +1,6 @@
 module.exports = {
 
-  dest: 'vuepress',
+  dest: 'docs',
 
   // Locale
   locales: {
