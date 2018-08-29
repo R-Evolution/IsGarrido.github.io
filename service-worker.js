@@ -21,7 +21,7 @@ importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.4.1/workbox
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "1e50b6e97011ff24b391dd483006eb3c"
+    "revision": "261be9256f447656abba199689264363"
   },
   {
     "url": "assets/css/0.styles.e67848d1.css",
@@ -168,12 +168,12 @@ self.__precacheManifest = [
     "revision": "775e7df0bebd5a1d875c999c63311a06"
   },
   {
-    "url": "assets/js/app.ab3291f1.js",
-    "revision": "704b072f1d788a22406f4ea3f8c1bbc3"
+    "url": "assets/js/app.fe808553.js",
+    "revision": "d5d9e383c6821772341b46d17c0f7381"
   },
   {
     "url": "blog/entry.html",
-    "revision": "a3230b4819b5246be67c5add97d6f9b4"
+    "revision": "b9270260efec1e2ecee909666d97bfd2"
   },
   {
     "url": "css/bulma.css",
@@ -185,87 +185,87 @@ self.__precacheManifest = [
   },
   {
     "url": "documents/TFG.html",
-    "revision": "7e5d29fc879279a15aaeed23447a3280"
+    "revision": "abdbf666d6e62f856722d96db040c2c1"
   },
   {
     "url": "documents/TFM.html",
-    "revision": "2fc9600d64fbf78decce992ca54668f8"
+    "revision": "f48bdec541bb77ea0aad596da927bf41"
   },
   {
     "url": "en/guide/assets.html",
-    "revision": "5a5f0c7577e54c1f07603d51f0a4019d"
+    "revision": "56de68dce3f8c012a11a9877966be2ac"
   },
   {
     "url": "en/guide/basic-config.html",
-    "revision": "4ad2baeca2c92dc871f3c23d478f1b58"
+    "revision": "b0b5dd303253764ff37d4db931d50fb1"
   },
   {
     "url": "en/guide/custom-themes.html",
-    "revision": "032d7d44f1721fbd8c267e5f1c7cba05"
+    "revision": "504d081a645e6e720cdcbecd14a16851"
   },
   {
     "url": "en/guide/deploy.html",
-    "revision": "1cd392ef4a9d127ce4fc0e9afdce4865"
+    "revision": "7fb77dc591990658115afae6d051db56"
   },
   {
     "url": "en/guide/getting-started.html",
-    "revision": "de6a6ac6d515cfdae648ea9ab7b23647"
+    "revision": "b9e030a5e6effbdf9f03225bc28bf318"
   },
   {
     "url": "en/guide/i18n.html",
-    "revision": "94056b8efa49554e32a1b89d70b4e2db"
+    "revision": "7982cede34472d471ad1fa734b14dcfa"
   },
   {
     "url": "en/guide/index.html",
-    "revision": "826f49dcc6f118306a80b9bd6f46e4b2"
+    "revision": "f6e2f0b01ec7b91a76a5a4935cfcfdd2"
   },
   {
     "url": "en/guide/markdown.html",
-    "revision": "73ad510d611a9cff37d2dbd472df5d19"
+    "revision": "b3d3f67a9776992c87b0805ada1a0949"
   },
   {
     "url": "en/guide/using-vue.html",
-    "revision": "845bdcb905bbead2c33b8c56ee6d9127"
+    "revision": "ff639c43dec82cddd9b3259a839eb6d5"
   },
   {
     "url": "en/index.html",
-    "revision": "7ec88fbe957bd1fa2ce5e0c3dd52c0d7"
+    "revision": "656d70b8fdcd0854329b1b915bb22f75"
   },
   {
     "url": "guide/assets.html",
-    "revision": "49d66524f1603753fa891ac0fbf4ae7f"
+    "revision": "d383a162d6215e91e8905ed5d0c8a0e4"
   },
   {
     "url": "guide/basic-config.html",
-    "revision": "5e8a0c9b8b4c78b0c43df43195f7e85f"
+    "revision": "4535632ecda0b88881494952bf91b025"
   },
   {
     "url": "guide/custom-themes.html",
-    "revision": "c718efa39d6e0cb7187de9e2f2603e19"
+    "revision": "02187bddfbdbdc25426820bb313263fa"
   },
   {
     "url": "guide/deploy.html",
-    "revision": "fd3a8d20828aec68ed91647aa150e813"
+    "revision": "b0ec56f871eacbb966807a4628553aae"
   },
   {
     "url": "guide/getting-started.html",
-    "revision": "64c601d6c56cf88959eff56076c7b5bf"
+    "revision": "0ae8a2207e0606aec9076a0b62971f2a"
   },
   {
     "url": "guide/i18n.html",
-    "revision": "5ae92a4e580d9fe68480e837ff1fe656"
+    "revision": "a64f7148c5555ed9be54fc3a7bf1d089"
   },
   {
     "url": "guide/index.html",
-    "revision": "433e2ddcef27986b31bd2b15e9baef07"
+    "revision": "9b8e7cf8b5941850488af3d506df19ec"
   },
   {
     "url": "guide/markdown.html",
-    "revision": "295dca5d863e3284d6be804465407233"
+    "revision": "61988f0d4ee179540ac841ed7e5c7d5f"
   },
   {
     "url": "guide/using-vue.html",
-    "revision": "08a4e6edaef5293f8702d05054878c1e"
+    "revision": "08e59015780eb938ba162515cd459c37"
   },
   {
     "url": "hero.png",
@@ -325,7 +325,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "85b89fa36893fb0f7613dc9564082e3f"
+    "revision": "f12625edf156cecf4de460f01ca48d45"
   },
   {
     "url": "line-numbers-desktop.png",
@@ -341,19 +341,19 @@ self.__precacheManifest = [
   },
   {
     "url": "poc/phantomjs.html",
-    "revision": "3896f83a38b044c0d192b5f52c15e138"
+    "revision": "458e04b8407f62cafa42998b4e81d6df"
   },
   {
     "url": "resources/usability.html",
-    "revision": "eefccbc747a6ca21f5402494df463e2d"
+    "revision": "f088f0e9c3ed02d6e41cec80347e8b1d"
   },
   {
     "url": "whoami/index.html",
-    "revision": "71698439481b6f8a7acfcdabba9a0033"
+    "revision": "ce6ebdf02d25af34d32755239f8df9b8"
   },
   {
     "url": "whoami/tech.html",
-    "revision": "2a0fdab3824082d975dfc01c5b336bfb"
+    "revision": "cdc9570b89b0123db39fd1d0442a1cfb"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
