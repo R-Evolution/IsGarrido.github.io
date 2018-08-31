@@ -230,3 +230,92 @@ a.sidebar-link:hover {
 .title-Home h1{
   color: white;
 }
+
+/* TRIFORCE */
+#trifoce{
+  height: 200px;
+}
+
+.triangle {
+	width: 200px;
+  height: 200px;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+#triforce-top {
+	top: 100px;
+	left: calc(50% - 100px);
+	animation: translate-top 6s ease;
+}
+
+#triforce-bottom-left {
+	top: 200px;
+	left: calc(50% - 150px);
+	animation: translate-bottom-left 6s ease;
+}
+
+#triforce-bottom-right {
+	top: 200px;
+	left: calc(50% - 50px);
+	animation: translate-bottom-right 6s ease;
+}
+
+.triangle .back, .triangle .front {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: solid 50px transparent;
+  border-right: solid 50px transparent;
+  border-bottom: solid 100px #f5db23;
+}
+
+.triangle .left, .triangle .right, .triangle .bottom {
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 112px;
+	background-color: #e2a20a;
+}
+
+.triangle .front {
+  transform: rotateY(0deg) translateZ(11px);
+}
+
+.triangle .back {
+  transform: rotateY(180deg) translateZ(11px);
+}
+
+.triangle .right {
+  transform: rotateY(90deg) rotateX(26.5deg) translateY(23px) translateZ(60px);
+}
+
+.triangle .left {
+  transform: rotateY(-90deg) rotateX(26.5deg) translateZ(-10px) translateY(-12px);
+}
+
+.triangle .bottom {
+	height: 100px;
+  transform: rotateY(90deg) rotateX(90deg) translateZ(-50px) translateY(39px);
+}
+
+@keyframes translate-top {
+	0% { transform: translate(0, -200px) rotate3d(-1,-1,-1, 1080deg); }
+	100% { translate(0, 0); }
+}
+
+@keyframes translate-bottom-left {
+	0% { transform: translate(-200px, 200px) rotate3d(1,1,1, -1080deg); }
+	100% { translate(0, 0); }
+}
+
+@keyframes translate-bottom-right {
+	0% { transform: translate(200px, 200px) rotate3d(1,1,1, 1080deg); }
+	100% { translate(0, 0); }
+}
+
+@keyframes flash {
+	from { background-color : #f5db23;}
+	to { background-color : #034D0E;}
+}
